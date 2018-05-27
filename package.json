@@ -1,0 +1,14 @@
+{
+  "name": "algorithm-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "trungk18",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.1.2"
+  }
+}
