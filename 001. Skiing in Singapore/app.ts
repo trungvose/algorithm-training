@@ -18,8 +18,10 @@ class SkiingInSingapore {
     //n m input
     private static n: number;
     private static m: number;
-    //to hold the 2 dimensions array of number;
+
+    //array to hold the 2 dimensions array of number;
     private static map: number[][] = [];
+
     //the expected result will be saved here
     private static maxLength: number = 0;
     private static maxDrop: number = 0;
@@ -51,15 +53,18 @@ class SkiingInSingapore {
         //go up [x, y + 1], go right [x + 1, y], go down [x, y - 1], go left [x - 1, y]
         let xAxis = [0, 1, 0, -1];
         let yAxis = [1, 0, -1, 0];
+
         //check if the moving is still inside the graph
         var isInsideGraph = x + xAxis[k] >= 0 && x + xAxis[k] < this.n && y + yAxis[k] >= 0 && y + yAxis[k] < this.m;
         for (var k = 0; k < 4; k++) {
             if (isInsideGraph && (this.map[x][y] > this.map[x + xAxis[k]][y + yAxis[k]])) {
+
                 //if can traverse and the current value is bigger the the next traverse point.
                 //set the length and keep the start point. to calculate the maxlength and drop later.
                 this.traverse(x + xAxis[k], y + yAxis[k], length + 1, start)
             }
         }
+
         //current drop
         var drop = start - this.map[x][y];
         if (length > this.maxLength) {
