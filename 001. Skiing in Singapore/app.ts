@@ -26,13 +26,12 @@ class SkiingInSingapore {
     private static maxLength: number = 0;
     private static maxDrop: number = 0;
 
-    public static Main(data: string[]) {
-        var i;
+    public static Main(data: string[]) {        
         let [firstLine, ...restData] = data;
         let nm = this.splitString(firstLine);
         this.n = nm[0];
         this.m = nm[1];
-        for (i = 0; i < restData.length; i++) {
+        for (let i = 0; i < restData.length; i++) {
             this.map[i] = this.splitString(restData[i]);
         }
 
@@ -44,7 +43,7 @@ class SkiingInSingapore {
                 }
             }
         }
-        console.log(`Max length ${this.maxLength}, maxDrop ${this.maxDrop}`)
+        console.log(`Max length ${this.maxLength}, max drop ${this.maxDrop}`)
     }
 
     private static traverse(x: number, y: number, length: number, start: number) {
