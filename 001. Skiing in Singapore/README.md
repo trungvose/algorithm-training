@@ -1,15 +1,16 @@
 # Skiing in Singapore - a coding diversion
 
-I read about this problem when an advertisement of Redmart pop out on Stackoverflow job. It looks promising so I decided to do it. You can red a step by step solution on my code. This is also my first time to use node api to read the local file.
+I read about this problem when an advertisement of Redmart pops out on Stackoverflow job. It looks promising so I decided to do it. You can read a step by step solution on my code. This is also my first time to use node API to read the local file.
 
 ### To test it
 
-There are 2 txt file, named corresponding as.
+There are 2 text files, named corresponding as.
 
-1. "test.txt" - the 4x4 matrix as you see below
-2. "map.txt"  - the 1000x1000 matrix
+1. [test.txt](https://raw.githubusercontent.com/trungk18/algorithm-training/master/001.%20Skiing%20in%20Singapore/test.txt) - the 4x4 matrix as you see below
 
-Just change the name on "app.ts" and you will get the result. I will add the unit test later.
+2. [map.txt](https://raw.githubusercontent.com/trungk18/algorithm-training/master/001.%20Skiing%20in%20Singapore/map.txt) - the 1000x1000 matrix
+
+Just change the name on **app.ts** and you will get the result. I will add the unit test later.
 
 ---
 
