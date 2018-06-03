@@ -1,6 +1,6 @@
-import { ReadFile } from "../Common/common";
+import { ReadFile, splitString } from "../Common/common";
 
-ReadFile.Read(data => SkiingInSingapore.Main(data))
+ReadFile.Read(__dirname, "map.txt", data => SkiingInSingapore.Main(data))
 
 class SkiingInSingapore {
     //n m input
@@ -16,11 +16,11 @@ class SkiingInSingapore {
 
     public static Main(data: string[]) {        
         let [firstLine, ...restData] = data;
-        let nm = this.splitString(firstLine);
+        let nm = splitString(firstLine);
         this.n = nm[0];
         this.m = nm[1];
         for (let i = 0; i < restData.length; i++) {
-            this.map[i] = this.splitString(restData[i]);
+            this.map[i] = splitString(restData[i]);
         }
 
         for (var x = 0; x < this.n; x++) {
@@ -63,11 +63,6 @@ class SkiingInSingapore {
         if (length === this.maxLength && this.maxDrop < drop) {
             this.maxDrop = drop;
         }
-    }
-
-    private static splitString(input: string): number[] {
-        //split the string by space to get the array number, take only the item with value.
-        return input.split(" ").map(item => parseInt(item)).filter(item => item !== null || item !== undefined);
     }
 }
 

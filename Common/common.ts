@@ -1,9 +1,9 @@
 export class ReadFile {
-    public static Read(callBack: Function) {
+    public static Read(dir, file, callBack: Function) {
         //read file
         var fs = require('fs'),
             path = require('path'),
-            filePath = path.join(__dirname, 'map.txt');
+            filePath = path.join(dir, file);
 
         fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
             if (!err) {
@@ -16,4 +16,9 @@ export class ReadFile {
         });
 
     }
+}
+
+export function splitString(input: string): number[] {
+    //split the string by space to get the array number, take only the item with value.
+    return input.split(" ").map(item => parseInt(item)).filter(item => item !== null || item !== undefined);
 }
