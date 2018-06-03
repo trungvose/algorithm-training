@@ -2,7 +2,6 @@
 
 I read about this problem when an advertisement of Redmart pop out on Stackoverflow job. It looks promising so I decided to do it. You can red a step by step solution on my code. This is also my first time to use node api to read the local file.
 
-
 ### To test it
 
 There are 2 txt file, named corresponding as.

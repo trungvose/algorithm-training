@@ -1,18 +1,6 @@
-const readline = require('readline');
+import { ReadFile } from "../Common/common";
 
-//read file
-var fs = require('fs'),
-    path = require('path'),
-    filePath = path.join(__dirname, 'map.txt');
-
-fs.readFile(filePath, { encoding: 'utf-8' }, function (err, data) {
-    if (!err) {
-        //start
-        SkiingInSingapore.Main(data.split("\n"));
-    } else {
-        console.log(err);
-    }
-});
+ReadFile.Read(data => SkiingInSingapore.Main(data))
 
 class SkiingInSingapore {
     //n m input
