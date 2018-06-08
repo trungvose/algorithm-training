@@ -14,7 +14,7 @@ class SkiingInSingapore {
     private static maxLength: number = 0;
     private static maxDrop: number = 0;
 
-    public static Main(data: string[]) {        
+    public static Main(data: string[]) {
         let [firstLine, ...restData] = data;
         let nm = splitString(firstLine);
         this.n = nm[0];
@@ -41,9 +41,9 @@ class SkiingInSingapore {
         let xAxis = [0, 1, 0, -1];
         let yAxis = [1, 0, -1, 0];
 
-        //check if the moving is still inside the graph
-        var isInsideGraph = x + xAxis[k] >= 0 && x + xAxis[k] < this.n && y + yAxis[k] >= 0 && y + yAxis[k] < this.m;
         for (var k = 0; k < 4; k++) {
+            //check if the moving is still inside the graph
+            var isInsideGraph = x + xAxis[k] >= 0 && x + xAxis[k] < this.n && y + yAxis[k] >= 0 && y + yAxis[k] < this.m;
             if (isInsideGraph && (this.map[x][y] > this.map[x + xAxis[k]][y + yAxis[k]])) {
 
                 //if can traverse and the current value is bigger the the next traverse point.
