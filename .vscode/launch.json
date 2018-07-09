@@ -9,7 +9,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/001. Skiing in Singapore/app.ts",
+            "program": "${workspaceFolder}/004. 1,000,000th Customer Prize/app.ts",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]
