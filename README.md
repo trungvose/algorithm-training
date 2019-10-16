@@ -1,6 +1,7 @@
 # algorithm-training
 Self training and practicing everyday.
-Daily practicing on [Leetcode - trungk18](https://leetcode.com/trungk18/)
+
+Enthusiastic about solving problems using technologies. [trungk18](https://leetcode.com/trungk18/)
 
 ## Prerequisites
 
