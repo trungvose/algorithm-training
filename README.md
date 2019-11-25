@@ -1,6 +1,8 @@
 # algorithm-training
 Self training and practicing everyday.
 
+Enthusiastic about solving problems using technologies. [trungk18](https://leetcode.com/trungk18/)
+
 ## Prerequisites
 
 Node.js and npm are essential to run it locally. You also need to install TypeScript.
