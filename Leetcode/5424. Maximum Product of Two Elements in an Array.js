@@ -25,4 +25,4 @@ var maxProduct = function (nums) {
     return max
 };
 
-module.exports = maxProduct;
+export default maxProduct;

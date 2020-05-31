@@ -1,7 +1,8 @@
 # algorithm-training
+
 Self training and practicing everyday.
 
-Enthusiastic about solving problems using technologies. [trungk18](https://leetcode.com/trungk18/)
+Enthusiastic about solving problems using technologies. [https://leetcode.com/trungk18/][0]
 
 ## Prerequisites
 
@@ -39,3 +40,5 @@ node app.js
 If you are using VS Code, just press F5 and the point to the file you want to run. Then you can debug it as well.
 
 ![VS Code Debug](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/vs-code-debug.png)
+
+[0]: https://leetcode.com/trungk18/
