@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.splitString = exports.ReadFile = void 0;
 var ReadFile = /** @class */ (function () {
     function ReadFile() {
     }
