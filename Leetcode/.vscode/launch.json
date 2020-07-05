@@ -5,7 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/5429. The k Strongest Values in an Array.js",
+      "program": "${workspaceFolder}/5452. Can Make Arithmetic Progression From Sequence.js",
       "skipFiles": ["<node_internals>/**"]
     },
     {
