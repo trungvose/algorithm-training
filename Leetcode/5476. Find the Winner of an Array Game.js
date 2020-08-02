@@ -4,24 +4,26 @@
  * @return {number}
  */
 var getWinner = function (arr, k) {
+  let arrMax = Math.max(...arr);
   if (k >= arr.length) {
-    return Math.max(...arr);
+    return arrMax;
   }
   let tempK = 0;
-  let winner = arr[0];
-  while (tempK !== k) {
-    let first = arr[0];
-    let second = arr[1];
+  let winner = arr.shift();
+  while (tempK < k) {
 
-    winner = Math.max(first, second);
+    if (winner == arrMax) {
+      return arrMax;
+    }
 
-    if (winner === first) {
-      arr.splice(1, 1);
+    let second = arr.shift();
+
+    if (winner > second) {
       arr.push(second);
       tempK++;
     } else {
-      arr.splice(0, 1);
-      arr.push(first);
+      arr.push(winner);
+      winner = second;
       tempK = 1;
     }
   }
