@@ -39,6 +39,6 @@ node app.js
 
 If you are using VS Code, just press F5 and the point to the file you want to run. Then you can debug it as well.
 
-![VS Code Debug](https://github.com/trungk18/trungk18.github.io/raw/master/img/blog/vs-code-debug.png)
+![VS Code Debug](https://trungk18.com/img/blog/vs-code-debug.png)
 
 [0]: https://leetcode.com/trungk18/
