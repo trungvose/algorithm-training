@@ -3,7 +3,7 @@ function mostVisited(n: number, rounds: number[]): number[] {
   for (let i = 0; i < rounds.length - 1; i++) {
     const current = rounds[i];
     const next = rounds[i + 1];
-    if (current < next) {
+    if (current <= next) {
       for (let j = current; j < next; j++) {
         updateRound(j);
       }
