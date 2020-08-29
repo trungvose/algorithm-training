@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "module": "commonjs"
+  },
+  "exclude": ["node_modules"]
+}
