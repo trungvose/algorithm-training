@@ -19,9 +19,7 @@ export function numIslands(grid: string[][]): number {
 
   return numOfIslands;
 
-  function dfs(grid: string[][], r: number, c: number) {
-    let rows = grid.length;
-    let cols = grid[0].length;
+  function dfs(grid: string[][], r: number, c: number) {    
     let isNotValidOrOutsideOfGrid =
       r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] === "0";
     if (isNotValidOrOutsideOfGrid) {
