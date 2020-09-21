@@ -1,4 +1,4 @@
-import { maxProductPath } from "./5521. Maximum Non Negative Product in a Matrix";
+import { maxProductPath } from "./1594. Maximum Non Negative Product in a Matrix";
 
 describe("5521. Maximum Non Negative Product in a Matrix", () => {
   it("should pass the first test", () => {
