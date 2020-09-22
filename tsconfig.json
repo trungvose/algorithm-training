@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strictNullChecks": true,
+    "noImplicitAny": true,
     "target": "ES2017",
     "module": "System",
     "sourceMap": true,
