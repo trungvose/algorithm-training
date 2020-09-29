@@ -1,4 +1,4 @@
-import { calcEquation } from "./399. Evaluate Division";
+import { calcEquation } from "./0399. Evaluate Division";
 
 describe("399. Evaluate Division", () => {
   it("should pass the first test case", () => {

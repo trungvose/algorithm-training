@@ -1,4 +1,4 @@
-import { addBinary } from "./67. Add Binary";
+import { addBinary } from "./0067. Add Binary";
 
 describe("67. Add Binary.ts", () => {
   it("should pass the first test", () => {

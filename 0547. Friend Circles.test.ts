@@ -1,4 +1,4 @@
-import { findCircleNum } from "./547. Friend Circles";
+import { findCircleNum } from "./0547. Friend Circles";
 
 describe("547. Friend Circles", () => {
   it("should pass the Test case 01", () => {

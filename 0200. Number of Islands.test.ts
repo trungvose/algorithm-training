@@ -1,4 +1,4 @@
-import { numIslands } from "./200. Number of Islands";
+import { numIslands } from "./0200. Number of Islands";
 
 describe("200. Number of Islands", () => {
   it("should pass the Test case 01", () => {

@@ -1,4 +1,4 @@
-import { solve } from "./130. Surrounded Regions";
+import { solve } from "./0130. Surrounded Regions";
 
 describe("130. Surrounded Regions", () => {
   it("should pass the Test case 01", () => {
