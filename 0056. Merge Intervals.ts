@@ -2,7 +2,7 @@
 //Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
 //Output: [[1,6],[8,10],[15,18]]
 
-function merge(intervals: number[][]): number[][] {
+export function merge(intervals: number[][]): number[][] {
   if (!intervals.length) {
     return [];
   }
