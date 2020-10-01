@@ -65,3 +65,5 @@ var threeSum = function (nums: number[], target = 0) {
   }
   return result;
 };
+
+export { threeSum };
