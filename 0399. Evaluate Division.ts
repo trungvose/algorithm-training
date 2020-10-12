@@ -80,7 +80,7 @@ class GraphNode {
   constructor(value: string) {
     this.value = value;
     this.state = GraphNodeState.NotYet;
-    this.neighbors = new Map();
+    this.neighbors = new Map<GraphNode, number>();
   }
 
   setNeighbor(node: GraphNode, value: number) {
