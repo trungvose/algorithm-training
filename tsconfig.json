@@ -6,5 +6,6 @@
     "module": "System",
     "sourceMap": true,
     "lib": ["DOM", "ES2017"]
-  }
+  },
+  "files": []
 }
