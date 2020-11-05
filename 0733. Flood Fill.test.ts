@@ -1,4 +1,4 @@
-import { floodFill } from './0733. Flood Fill';
+import { floodFill } from './0733. Flood Fill'
 describe('0733. Flood Fill', () => {
   it('should pass the first test case', () => {
     expect(
@@ -6,7 +6,7 @@ describe('0733. Flood Fill', () => {
         [
           [1, 1, 1],
           [1, 1, 0],
-          [1, 0, 1],
+          [1, 0, 1]
         ],
         1,
         1,
@@ -15,7 +15,7 @@ describe('0733. Flood Fill', () => {
     ).toStrictEqual([
       [2, 2, 2],
       [2, 2, 0],
-      [2, 0, 1],
-    ]);
-  });
-});
+      [2, 0, 1]
+    ])
+  })
+})

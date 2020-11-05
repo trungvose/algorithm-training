@@ -3,11 +3,11 @@
  * @param {number} n
  * @return {number[]}
  */
-var shuffle = function (nums, n) {
-  let retVal = [];
+const shuffle = function (nums, n) {
+  const retVal = []
   for (let index = 0; index < n; index++) {
-    retVal.push(nums[index]);
-    retVal.push(nums[n + index]);
+    retVal.push(nums[index])
+    retVal.push(nums[n + index])
   }
-  return retVal;
-};
+  return retVal
+}

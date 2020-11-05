@@ -3,31 +3,30 @@
  * @param {number} k
  * @return {number}
  */
-var getWinner = function (arr, k) {
-  let arrMax = Math.max(...arr);
+const getWinner = function (arr, k) {
+  const arrMax = Math.max(...arr)
   if (k >= arr.length) {
-    return arrMax;
+    return arrMax
   }
-  let tempK = 0;
-  let winner = arr.shift();
+  let tempK = 0
+  let winner = arr.shift()
   while (tempK < k) {
-
-    if (winner == arrMax) {
-      return arrMax;
+    if (winner === arrMax) {
+      return arrMax
     }
 
-    let second = arr.shift();
+    const second = arr.shift()
 
     if (winner > second) {
-      arr.push(second);
-      tempK++;
+      arr.push(second)
+      tempK++
     } else {
-      arr.push(winner);
-      winner = second;
-      tempK = 1;
+      arr.push(winner)
+      winner = second
+      tempK = 1
     }
   }
-  return winner;
-};
+  return winner
+}
 
-export default getWinner;
+export default getWinner

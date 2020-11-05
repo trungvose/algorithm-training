@@ -12,24 +12,24 @@
  * @param {function} isBadVersion()
  * @return {function}
  */
-//Time O(logn)
-//Space O(1)
-var solution = function (isBadVersion) {
+// Time O(logn)
+// Space O(1)
+const solution = function (isBadVersion) {
   /**
    * @param {integer} n Total versions
    * @return {integer} The first bad version
    */
   return function (n) {
-    let left = 1;
-    let right = n;
+    let left = 1
+    let right = n
     while (left < right) {
-      let mid = Math.floor(left + (right - left) / 2);
+      const mid = Math.floor(left + (right - left) / 2)
       if (isBadVersion(mid)) {
-        right = mid;
+        right = mid
       } else {
-        left = mid + 1;
+        left = mid + 1
       }
     }
-    return left;
-  };
-};
+    return left
+  }
+}

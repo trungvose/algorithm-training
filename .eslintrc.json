@@ -1,0 +1,20 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": ["standard"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["temp.js", "**/TypeScript/*.*"],
+  "rules": {
+    "semi": ["error", "never"],
+    "no-unused-vars": ["off"],
+    "no-useless-constructor": "off"
+  }
+}

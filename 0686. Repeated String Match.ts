@@ -1,3 +1,3 @@
-function repeatedStringMatch(A: string, B: string): number {
+function repeatedStringMatch (A: string, B: string): number {
 
 };

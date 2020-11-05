@@ -1,4 +1,4 @@
-//https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html
+// https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html
 
 interface NetworkStateInterface {
   state: NetworkStateType;
@@ -25,7 +25,7 @@ interface SuccessState extends NetworkStateInterface {
 interface FromCacheState extends NetworkStateInterface {
   state: NetworkStateType.FromCached;
   id: string;
-  response: SuccessState["response"];
+  response: SuccessState['response'];
 }
 
 // Create a type which represents only one of the above types
@@ -36,32 +36,32 @@ type NetworkStateWithInterface =
   | FailedState
   | FromCacheState;
 
-function networkStatus(state: NetworkStateWithInterface): string {
+function networkStatus (state: NetworkStateWithInterface): string {
   // Right now TypeScript does not know which of the three
   // potential types state could be.
 
   // Trying to access a property which isn't shared
   // across all types will raise an error
-  //state.code;
+  // state.code;
 
   // By switching on state, TypeScript can narrow the union
   // down in code flow analysis
   switch (state.state) {
     case NetworkStateType.Loading:
-      return "Downloading...";
+      return 'Downloading...'
 
     case NetworkStateType.Failed:
       // The type must be NetworkFailedState here,
       // so accessing the `code` field is safe
-      return `Error ${state.code} downloading`;
+      return `Error ${state.code} downloading`
 
     case NetworkStateType.Success:
-      return `Downloaded ${state.response.title} - ${state.response.summary}`;
+      return `Downloaded ${state.response.title} - ${state.response.summary}`
 
     case NetworkStateType.FromCached:
-      return `Downloaded ${state.response.title} - ${state.response.summary}`;
+      return `Downloaded ${state.response.title} - ${state.response.summary}`
 
     default:
-      return assertNever(state);
+      return assertNever(state)
   }
 }

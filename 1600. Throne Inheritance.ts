@@ -1,59 +1,60 @@
+class Person {
+  children: Person[];
+  alive: boolean;
+  constructor (public name: string, public parentName?: string) {
+    this.children = []
+    this.alive = true
+  }
+
+  addChild (child: Person) {
+    this.children.push(child)
+  }
+
+  dead () {
+    this.alive = false
+  }
+}
+
 class ThroneInheritance {
   map = new Map<string, Person>();
   king: Person;
 
-  constructor(kingName: string) {
-    let king = new Person(kingName);
-    this.king = king;
-    this.map.set(kingName, king);
+  constructor (kingName: string) {
+    const king = new Person(kingName)
+    this.king = king
+    this.map.set(kingName, king)
   }
 
-  birth(parentName: string, childName: string): void {
-    const child = new Person(childName, parentName);
-    const parent = this.map.get(parentName);
-    parent?.addChild(child);
-    this.map.set(childName, child);
+  birth (parentName: string, childName: string): void {
+    const child = new Person(childName, parentName)
+    const parent = this.map.get(parentName)
+    parent?.addChild(child)
+    this.map.set(childName, child)
   }
 
-  death(name: string): void {
-    let person = this.map.get(name);
+  death (name: string): void {
+    const person = this.map.get(name)
     if (person) {
-      person.dead();
+      person.dead()
     }
   }
 
-  getInheritanceOrder(): string[] {
+  getInheritanceOrder (): string[] {
     const dfs = (root: Person) => {
       if (!root) {
-        return;
+        return
       }
       if (root.alive) {
-        result.push(root.name);
+        result.push(root.name)
       }
       for (const child of root.children) {
-        dfs(child);
+        dfs(child)
       }
-    };
+    }
 
-    const result: string[] = [];
-    dfs(this.king);
-    return result;
-  }
-}
-
-class Person {
-  children: Person[];
-  alive: boolean;
-  constructor(public name: string, public parentName?: string) {
-    this.children = [];
-    this.alive = true;
-  }
-
-  addChild(child: Person) {
-    this.children.push(child);
-  }
-  dead() {
-    this.alive = false;
+    const result: string[] = []
+    dfs(this.king)
+    return result
   }
 }
 

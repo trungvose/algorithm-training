@@ -1,13 +1,13 @@
 /**
  * @param {string} homepage
  */
-var BrowserHistory = function (homepage) {
+const BrowserHistory = function (homepage) {
   this.current = {
     url: homepage,
     next: null,
-    back: null,
-  };
-};
+    back: null
+  }
+}
 
 /**
  * @param {string} url
@@ -17,10 +17,10 @@ BrowserHistory.prototype.visit = function (url) {
   this.current.next = {
     url,
     next: null,
-    back: this.current,
-  };
-  this.current = this.current.next;
-};
+    back: this.current
+  }
+  this.current = this.current.next
+}
 
 /**
  * @param {number} steps
@@ -28,11 +28,11 @@ BrowserHistory.prototype.visit = function (url) {
  */
 BrowserHistory.prototype.back = function (steps) {
   while (steps !== 0 && this.current.back) {
-    this.current = this.current.back;
-    steps--;
+    this.current = this.current.back
+    steps--
   }
-  return this.current.url;
-};
+  return this.current.url
+}
 
 /**
  * @param {number} steps
@@ -40,11 +40,11 @@ BrowserHistory.prototype.back = function (steps) {
  */
 BrowserHistory.prototype.forward = function (steps) {
   while (steps !== 0 && this.current.next) {
-    this.current = this.current.next;
-    steps--;
+    this.current = this.current.next
+    steps--
   }
-  return this.current.url;
-};
+  return this.current.url
+}
 
 /**
  * Your BrowserHistory object will be instantiated and called as such:

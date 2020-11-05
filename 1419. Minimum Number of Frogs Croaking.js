@@ -2,33 +2,33 @@
  * @param {string} croakOfFrogs
  * @return {number}
  */
-var minNumberOfFrogs = function (croakOfFrogs) {
-    const CROAK_SOUND = "croak";
-    let mapSounds = {}
-    let ifOneCroak = occurrenceOfSubStr(croakOfFrogs, CROAK_SOUND) > 1;
-    if (ifOneCroak) {
-        return 1;
-    }
+const minNumberOfFrogs = function (croakOfFrogs) {
+  const CROAK_SOUND = 'croak'
+  const mapSounds = {}
+  const ifOneCroak = occurrenceOfSubStr(croakOfFrogs, CROAK_SOUND) > 1
+  if (ifOneCroak) {
+    return 1
+  }
 
-    for (var char of croakOfFrogs) {
-        let count = mapSounds[char] || 0;
-        mapSounds[char] = count + 1;
-    }
+  for (const char of croakOfFrogs) {
+    const count = mapSounds[char] || 0
+    mapSounds[char] = count + 1
+  }
 
-    let allChars = Object.keys(mapSounds);
-    let allCharsVal = allChars.map(char => mapSounds[char]);
-    let hasDifferentChar = allChars.some(char => !CROAK_SOUND.includes(char));
-    let hasDifferentSounds = new Set(allCharsVal).size > 1;
-    if (hasDifferentChar || hasDifferentSounds) {
-        return -1
-    }
-    return allCharsVal[0];
-};
-
-function occurrenceOfSubStr(s, subStr) {    
-    let regularExp = new RegExp(subStr, 'g');
-    let occurArray = s.match(regularExp);
-    return (occurArray || []).length;    
+  const allChars = Object.keys(mapSounds)
+  const allCharsVal = allChars.map(char => mapSounds[char])
+  const hasDifferentChar = allChars.some(char => !CROAK_SOUND.includes(char))
+  const hasDifferentSounds = new Set(allCharsVal).size > 1
+  if (hasDifferentChar || hasDifferentSounds) {
+    return -1
+  }
+  return allCharsVal[0]
 }
 
-minNumberOfFrogs("aoocrrackk")
+function occurrenceOfSubStr (s, subStr) {
+  const regularExp = new RegExp(subStr, 'g')
+  const occurArray = s.match(regularExp)
+  return (occurArray || []).length
+}
+
+minNumberOfFrogs('aoocrrackk')

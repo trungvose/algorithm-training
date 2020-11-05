@@ -1,56 +1,56 @@
-//N Queens Problem https://leetcode.com/problems/n-queens/
+// N Queens Problem https://leetcode.com/problems/n-queens/
 
-var solveNQueens = function(n) {
-  var result = [];
-  var positions = [];
-  solve(0, positions, result, n);
-  return result;
-};
+const solveNQueens = function (n) {
+  const result = []
+  const positions = []
+  solve(0, positions, result, n)
+  return result
+}
 
-function solve(currentRow, positions, result, n) {
+function solve (currentRow, positions, result, n) {
   if (n === currentRow) {
-    let oneResult = [];
-    let str = "";
-    for (var p of positions) {
+    const oneResult = []
+    let str = ''
+    for (const p of positions) {
       for (let col = 0; col < n; col++) {
         if (p.col === col) {
-          str += "Q";
+          str += 'Q'
         } else {
-          str += ".";
+          str += '.'
         }
       }
-      oneResult.push(str);
-      str = "";
+      oneResult.push(str)
+      str = ''
     }
-    result.push(oneResult);
+    result.push(oneResult)
   }
 
   for (let col = 0; col < n; col++) {
-    let isSafe = true;
+    let isSafe = true
 
     for (let j = 0; j < currentRow; j++) {
-      let isSameCol = positions[j].col === col;
-      let isSameDiag =
+      const isSameCol = positions[j].col === col
+      const isSameDiag =
         positions[j].col - positions[j].row === col - currentRow ||
-        positions[j].col + positions[j].row === col + currentRow;
+        positions[j].col + positions[j].row === col + currentRow
       if (isSameCol || isSameDiag) {
-        isSafe = false;
-        break;
+        isSafe = false
+        break
       }
     }
 
     if (isSafe) {
-      positions[currentRow] = new Position(currentRow, col);
-      solve(currentRow + 1, positions, result, n);
+      positions[currentRow] = new Position(currentRow, col)
+      solve(currentRow + 1, positions, result, n)
     }
   }
 }
 
 class Position {
-  constructor(row, col) {
-    this.row = row;
-    this.col = col;
+  constructor (row, col) {
+    this.row = row
+    this.col = col
   }
 }
 
-solveNQueens(4);
+solveNQueens(4)

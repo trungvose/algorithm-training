@@ -3,19 +3,19 @@
  * @param {number} k
  * @return {boolean}
  */
-var kLengthApart = function (nums, k) {
-    let idxArr = nums.reduce((arr, num, i) => {
-        if (num === 1) {
-            arr.push(i);
-        }
-        return arr;
-    }, []);
-    
-    for (let index = 0; index < idxArr.length - 1; index++) {
-        let diff = idxArr[index + 1] - idxArr[index] - 1;
-        if (diff < k) {
-            return false;            
-        }
+const kLengthApart = function (nums, k) {
+  const idxArr = nums.reduce((arr, num, i) => {
+    if (num === 1) {
+      arr.push(i)
     }
-    return true
-};
+    return arr
+  }, [])
+
+  for (let index = 0; index < idxArr.length - 1; index++) {
+    const diff = idxArr[index + 1] - idxArr[index] - 1
+    if (diff < k) {
+      return false
+    }
+  }
+  return true
+}

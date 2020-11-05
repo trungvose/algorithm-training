@@ -41,18 +41,18 @@
  * @return {number}
  */
 
-function depthSum(nestedList) {
-  return depthSumWithLevel(nestedList, 1);
+function depthSum (nestedList) {
+  return depthSumWithLevel(nestedList, 1)
 }
 
-function depthSumWithLevel(nestedList, level) {
-  let sum = 0;
+function depthSumWithLevel (nestedList, level) {
+  let sum = 0
   for (const n of nestedList) {
     if (n.isInteger()) {
-      sum += n.getInteger() * level;
+      sum += n.getInteger() * level
     } else {
-      sum += depthSumWithLevel(n.getList(), level + 1);
+      sum += depthSumWithLevel(n.getList(), level + 1)
     }
   }
-  return sum;
+  return sum
 }
